@@ -233,7 +233,7 @@ html {
   padding: var(--section-padding) 0px 0px;
 }
 
-.services .sevices-content {
+.services .services-content {
   margin-top: 80px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 40%));
@@ -252,7 +252,7 @@ html {
     padding: 20px 0px 0px;
   }
 
-  .services .sevices-content {
+  .services .services-content {
     justify-content: center;
     align-items: center;
   }
