@@ -127,16 +127,11 @@ html {
 
 /* very small */
 @media (max-width: 486px) {
-  /* .header .container {
-    flex-flow: column;
-    align-items: flex-start;
+  .header .logo img {
+    width: 60px;
   }
-
   .header .links {
-    align-self: flex-end;
-  } */
-  .header .links {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -390,19 +385,15 @@ html {
   color: var(--main-color);
 }
 
-/* very small 486px*/
+/* very small */
 @media (max-width: 610px) {
   .contact .contact-info {
     font-size: 25px;
   }
-
   .contact .container>a {
     font-size: 22px;
   }
 
-  .contact .socials {
-    word-spacing: 0.5;
-  }
 }
 
 
@@ -413,10 +404,21 @@ html {
   font-size: 16px;
 }
 
+.contact .socials p{
+  display: inline-block;
+}
+
 .contact .socials a {
   padding-left: 10px;
   color: var(--secondary-color);
   font-size: 18px;
+}
+
+/* very small */
+@media (max-width: 410px) {
+  .contact .socials p{
+    display: block;
+  }
 }
 
 /*********** contact section end ***********/
