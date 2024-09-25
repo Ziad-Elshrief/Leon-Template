@@ -127,13 +127,16 @@ html {
 
 /* very small */
 @media (max-width: 486px) {
-  .header .container {
+  /* .header .container {
     flex-flow: column;
     align-items: flex-start;
   }
 
   .header .links {
     align-self: flex-end;
+  } */
+  .header .links {
+    font-size: 16px;
   }
 }
 
@@ -245,7 +248,6 @@ html {
 .services .service {
   padding-right: 20px;
   display: flex;
-  align-items: flex-start;
 }
 
 /* Small */
@@ -257,6 +259,7 @@ html {
 
   .services .sevices-content {
     justify-content: center;
+    align-items: center;
   }
 
   .services .service {
@@ -268,7 +271,7 @@ html {
 .services .service i {
   color: var(--main-color);
   font-size: 30px;
-  padding-right: 15px;
+  padding: 0px 15px;
 }
 
 .services .service h2 {
