@@ -53,6 +53,7 @@ function checkActiveSection() {
   if (location.hash.length === 0) {
     links[0].classList.add("active");
   }
+  closeMenu();
 }
 /* check active section if # changes or on load */
 window.addEventListener("hashchange", checkActiveSection);
@@ -96,8 +97,10 @@ listBtn.onclick = function () {
 /* change item back to list and make menu disappear when you click cancel */
 let listCancel = document.querySelector(".menu button");
 
-listCancel.onclick = function () {
+listCancel.onclick = closeMenu;
+
+function closeMenu() {
   menu.style.display = "none";
   listBtn.firstElementChild.classList.remove("fa-bars-staggered");
   listBtn.firstElementChild.classList.add("fa-bars");
-};
+}
