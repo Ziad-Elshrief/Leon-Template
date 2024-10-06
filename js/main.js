@@ -62,22 +62,22 @@ window.onload = function () {
   and make changes to the page by adding dark-mode class to body*/
   if (localStorage.getItem("dark-mode") === "on") {
     body.classList.add("dark-mode");
-    modeBtn.firstElementChild.classList.remove("fa-sun");
-    modeBtn.firstElementChild.classList.add("fa-moon");
+    modeBtn.firstElementChild.classList.remove("fa-moon");
+    modeBtn.firstElementChild.classList.add("fa-sun");
   }
   checkActiveSection();
 };
 
 /* change between dark and normal mode using mode button */
 modeBtn.onclick = function () {
-  if (modeBtn.firstElementChild.classList[1] === "fa-sun") {
+  if (modeBtn.firstElementChild.classList[1] === "fa-moon") {
     body.classList.add("dark-mode");
-    modeBtn.firstElementChild.classList.remove("fa-sun");
-    modeBtn.firstElementChild.classList.add("fa-moon");
-    localStorage.setItem("dark-mode", "on");
-  } else {
     modeBtn.firstElementChild.classList.remove("fa-moon");
     modeBtn.firstElementChild.classList.add("fa-sun");
+    localStorage.setItem("dark-mode", "on");
+  } else {
+    modeBtn.firstElementChild.classList.remove("fa-sun");
+    modeBtn.firstElementChild.classList.add("fa-moon");
     body.classList.remove("dark-mode");
     localStorage.setItem("dark-mode", "off");
   }
