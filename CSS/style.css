@@ -22,6 +22,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--main-color) var(--secondary-background-color);
 }
 
 * {
@@ -100,9 +101,9 @@ a {
   border-radius: 6px;
   box-shadow: 0px 0px 1px 1px var(--main-color);
   position: fixed;
-  z-index: 3;
   bottom: 10px;
   right: 10px;
+  z-index: 3;
 }
 
 .up i {
@@ -115,10 +116,10 @@ a {
   padding: 20px 0px;
   position: sticky;
   z-index: 4;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   background-color: var(--sub-back-color);
-  box-shadow: 2px 0px 3px var(--secondary-background-color);
+  box-shadow: 0px 0px 3px var(--secondary-background-color);
 }
 
 .header .container {
@@ -159,6 +160,7 @@ a {
   padding: 20px 0 0 40px;
   background-color: var(--secondary-background-color);
   z-index: 4;
+  box-shadow: inset -3px 3px 3px -2px #1e1e1e;
 }
 
 /* Medium */
@@ -194,7 +196,7 @@ a {
   color: var(--main-color);
 }
 
-.header .links a.active{
+.header .links a.active {
   color: var(--main-color);
 }
 
@@ -214,7 +216,6 @@ a {
 
 /*********** info section start ***********/
 .info {
-  width: 100%;
   height: calc(100dvh - 85px);
   background-image: url(../images/landing.jpg);
   background-size: cover;
@@ -259,7 +260,6 @@ a {
 
 /*********** features section start ***********/
 .features {
-  width: 100%;
   padding: 50px 0px;
   background-color: var(--section-background);
 }
@@ -267,12 +267,12 @@ a {
 .features .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
 }
 
 .features .feature {
   text-align: center;
   line-height: 1.6;
-  padding: 20px;
 }
 
 .features .container i {
@@ -288,7 +288,6 @@ a {
 
 /*********** services section start ***********/
 .services {
-  width: 100%;
   padding: var(--section-padding) 0px 0px;
 }
 
@@ -432,6 +431,7 @@ a {
   padding: 30px 0px;
   font-size: 40px;
   font-weight: 800;
+  text-wrap: balance;
 }
 
 .contact .container>a {
@@ -444,38 +444,34 @@ a {
 /* Small */
 @media (max-width: 767px) {
   .contact .contact-info {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .contact .container>a {
-    font-size: 22px;
+    font-size: 24px;
   }
-
 }
 
 .contact .socials {
   padding: 30px 0px 80px 50px;
   color: var(--secondary-color);
-  font-size: 16px;
   text-wrap: balance;
 }
 
 .contact .socials p {
   display: inline-block;
+  font-size: 16px;
 }
 
 .contact .socials a {
   padding-left: 10px;
   color: var(--secondary-color);
-  font-size: 18px;
 }
-
 
 /*********** contact section end ***********/
 
 /*********** footer section start ***********/
 .footer {
-  width: 100%;
   background-color: var(--secondary-background-color);
 }
 

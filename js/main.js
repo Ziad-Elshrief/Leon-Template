@@ -8,7 +8,7 @@ window.onscroll = function () {
   if (scrollY >= 50) {
     upBtn.style.cssText = "display:block;";
   } else {
-    upBtn.style.cssText = "display:none;";
+    upBtn.removeAttribute("style");
   }
 };
 
@@ -29,7 +29,7 @@ function flipPortfolio() {
     );
     flipFlag = true;
   } else {
-    this.setAttribute("style", "transform: perspective(400px) rotateX(0deg);");
+    this.removeAttribute("style");
     flipFlag = false;
   }
 }
@@ -84,23 +84,32 @@ modeBtn.onclick = function () {
   }
 };
 
-/* make menu list appear when you press the list button and change the icon to staggered */
 let menu = document.querySelector(".header .menu");
 let listBtn = document.querySelector(".list");
 
+/* make menu list appear when you press the list button and change the icon to staggered */
 listBtn.onclick = function () {
   listBtn.firstElementChild.classList.remove("fa-bars");
   listBtn.firstElementChild.classList.add("fa-bars-staggered");
   menu.style.display = "block";
 };
 
-/* change item back to list and make menu disappear when you click cancel */
+
 let listCancel = document.querySelector(".menu button");
 
+/* close menu when cancel button is pressed */
 listCancel.onclick = closeMenu;
 
+/* menu closes when Esc is pressed from keyboard */
+window.addEventListener("keyup", function (e) {
+  if (e.key === "Escape") {
+    closeMenu();
+  }
+});
+
+/* function to change item back to list and make menu disappear*/
 function closeMenu() {
-  menu.style.display = "none";
   listBtn.firstElementChild.classList.remove("fa-bars-staggered");
   listBtn.firstElementChild.classList.add("fa-bars");
+  menu.removeAttribute("style");
 }
